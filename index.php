@@ -2,9 +2,9 @@
 $benchmark_time = time()+ microtime();
 /*	
  * OmPad
- * Version 1.0
+ * Version 1.0.1
  * by Xavi Esteve
- * Last update: 23 June 2011
+ * Last update: 31 July 2011
  */
 define("APP_URL", "http://xaviesteve.com/pro/ompad"); // no trailing slash
 define("APP_TITLE", "OmPad");
@@ -77,7 +77,6 @@ html{background:#fbfbfb;font-family:'Helvetica Neue',sans-serif;}
 	<div id="m">Loading...</div>
 	
 	<ul id="topnav">
-		<li><a href="#" id="customcss" title="Custom CSS">CSS</a></li>
 		<li><a href="#" id="email" title="Gmail this note">Email it</a></li>
 		<li><a href="#" id="retweet" title="Tell your followers about <?=APP_TITLE?>">Retweet</a></li>
 		<li><a href="#" id="help" title="What is <?=APP_TITLE?>?">About</a></li>
@@ -136,7 +135,7 @@ $(document).ready(function() {
 	style['nightsans'] = style['sans']+"html{background:#222;}#t{color:#aaa;}";
 
 	style['tinyscreen'] = "#t{font-family:sans-serif;font-size:1.6em;width:98%;margin-top:10px;padding:1%;}";
-
+	
 	style['hide'] = "#t{display:none;}";
 	
 	
@@ -168,6 +167,7 @@ $(document).ready(function() {
 	
 	function selectfile(i) {
 		textarea.val( localStorage.getItem("t"+i) ).focus();
+		localStorage.setItem("page", i );
 	}
 	
 	
@@ -181,7 +181,8 @@ $(document).ready(function() {
 	$('#email').click(function() {
 		popw='';
 		Q = textarea.val();
-		popw = window.open('https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=&su=' + escape('<?=APP_TITLE?>') + '&body=' + escape(Q) + '&zx=RANDOMCRAP&shva=1&disablechatbrowsercheck=1&ui=1','gmailForm','scrollbars=yes,width=680,height=510,top=175,left=75,status=no,resizable=yes');
+		su = Q.match(/^(.*)\n/);
+		popw = window.open('https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=&su=' + escape(su[1]) + '&body=' + escape(Q) + '&zx=RANDOMCRAP&shva=1&disablechatbrowsercheck=1&ui=1','gmailForm','scrollbars=yes,width=680,height=510,top=175,left=75,status=no,resizable=yes');
 		
 		if (!document.all) T = setTimeout('popw.focus()',50);
 		void(0);
@@ -226,12 +227,12 @@ $(document).ready(function() {
 	}else{
 		msgbox.html('Your browser does not support HTML5 (needed to save your work). Please upgrade to a modern browser').fadeIn();
 	}
-	selectfile(1);
-	$('#files>li:first-child').addClass('selected');
+	selectfile(localStorage.getItem("page"));
+	$('#files>li:eq('+(localStorage.getItem("page")-1)+')').addClass('selected');
 	textarea.focus();
 	
 	if (!textarea.val()) {textarea.val('Welcome! Start typing here...');}
-		
+			
 });
 </script>
 <!--GA-->
