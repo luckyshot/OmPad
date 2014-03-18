@@ -1,0 +1,27 @@
+html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:inherit;font-weight:inherit;}del,ins{text-decoration:none;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:baseline;}sub{vertical-align:baseline;}legend{color:#000;}input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}input,button,textarea,select{*font-size:100%;}/* Copyright (c) 2010, Yahoo! Inc. All rights reserved. Code licensed under the BSD License: http://developer.yahoo.com/yui/license.html version: 2.8.1 */
+
+html{background:#fbfbfb;font-family:'Helvetica Neue',sans-serif;}
+
+#menu{border-top:5px solid #999;color:#666;font-size:11px;font-weight:900;height:15px; overflow:hidden;position:absolute;top:0;left:10px;padding:0 10px 10px 10px;opacity: 0.6;width:50px;}
+	#menu:hover,#menu:focus {height:auto;background:#fbfbfb;padding:0 20px 40px 20px;left:0;}
+	
+#logo {color:#999;cursor:default;letter-spacing:-1px;margin:0 0 10px 0;text-align:center;}
+
+#menu #css>li {cursor:pointer;line-height:1.2em;}
+#menu #css>li:hover {color:#000;}
+
+#files {position:absolute;left:10px;bottom:10px;}
+#files>li {border:1px solid #ccc;border-radius:50px;height:20px;background:#ccc;margin-right:10px;display:inline-block;font-size:0;color:#ccc;width: 20px;vertical-align: top;opacity:.6;cursor:pointer;}
+#files>li.selected {background:transparent;opacity:.7;cursor:default;}
+
+#t{background:transparent;border:none;color:#222;display:block;font-family:Garamond,serif;font-size:1.2em;height:500px;line-height:1.6em;margin:0 auto;padding:2em;width:40em;outline: none;}
+#m{background: none repeat scroll 0 0 #FEFEA3;border: 1px solid #FFE067;border-radius: 5px 5px 5px 5px;color: #333;font-size: 12px;font-weight: 700;left: 50%;margin-left: -300px;opacity: 0.95;padding: 5px;position: absolute;text-align: center;top: 5px;width: 600px;}
+
+#topnav {position:absolute;top:0;right:10px;}
+#topnav li {display: inline-block;font-size: 10px;margin-left: 1em;opacity: 0.5;}
+#topnav li a {color: #000;text-decoration:none;}
+
+#box-help {background: #FBFBFB;border: 5px solid #EEE;cursor:pointer;display:none;border-radius: 20px;margin: 30px auto;opacity: 0.9;padding: 20px;width: 40%;position:absolute;left:30%;top:40px;}
+	#box-help h1 {font-weight: 900;font-size:32px;text-align:center;}
+	#box-help h2 {font-weight: 900;margin: 1em 0 0.3em;}
+	#box-help p {font-size: 12px;line-height: 1.6em;}
