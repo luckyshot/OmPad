@@ -8,22 +8,20 @@ html{background:#fbfbfb;font-family:'Helvetica Neue',sans-serif;}
 	
 	#logo {color:#999;cursor:default;letter-spacing:-1px;margin:0 0 10px 0;}
 
-#menu #css>li {cursor:pointer;line-height:120%;}
+#menu #css>li {cursor:pointer;line-height:120%;padding: 5px;}
 	#menu #css>li:hover {color:#000;}
 
 #files {position:absolute;left:10px;bottom:10px;}
-#files>li {border-radius:50px;height:20px;background:#ccc;margin-right:10px;display:inline-block;font-size:0;width: 20px;vertical-align: top;opacity:.6;cursor:pointer;}
-	#files>li.selected {background:transparent;opacity:.7;cursor:default;}
+#files>li {border: 1px solid transparent;border-radius:50px;height:20px;background:#ccc;margin-right:10px;display:inline-block;font-size:0;width: 20px;vertical-align: top;opacity:.6;cursor:pointer;}
+	#files>li.selected {background:transparent;border: 1px solid #ccc;opacity:.7;cursor:default;}
 
 #t{background:transparent;border:none;color:#222;display:block;font-family:Garamond,serif;font-size:120%;height:500px;line-height:1.6em;margin:0 auto;padding:5%;width:90%;max-width:40em;outline: none;}
 #m{background: none repeat scroll 0 0 #FEFEA3;border: 1px solid #FFE067;border-radius: 5px 5px 5px 5px;color: #333;font-size: 12px;font-weight: 700;left: 50%;margin-left: -300px;opacity: 0.95;padding: 5px;position: absolute;text-align: center;top: 5px;width: 600px;}
 
-#topnav {position:absolute;top:0;right:0;}
-	#topnav li {display: inline-block;font-size: 10px;margin-left: 1em;opacity: 0.5;}
-	#topnav li a {color: #000;padding:5px;text-decoration:none;}
+#help {display: inline-block;color: #000;font-size: 16px;position:absolute;padding:10px;text-decoration:none;top:0;right:0;opacity: 0.5;}
 
-#box-help {background: #fff;cursor: pointer;display: none;border-radius: 20px;margin: 0 auto;opacity: 0.9;padding: 40px;width: 40%;position: absolute;left: 30%;top: 40px;}
-	#box-help .center {text-align:center;}
+#box-help {background: #fff;cursor: pointer;border-radius: 20px;margin: 0 auto;opacity: 0.95;padding: 5%;width: 40%;position: absolute;left: 25%;top: 40px;box-shadow: 0 0 200px #666;}
+	#box-help .image {margin:0;text-align:center;}
 	#box-help h1 {color:#000;font-size:64px;font-weight: 900;text-align:center;}
 	#box-help p,
 	#box-help li {font-size: 16px;line-height: 1.5em;margin-bottom: 14px;}
