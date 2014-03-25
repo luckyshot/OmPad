@@ -11,6 +11,7 @@ $(document).ready(function() {
 	/*		Save text		*/
 	textarea.bind('input paste', function() {
 		localStorage.setItem("ompad_t"+$('#files>li.selected').html(), textarea.val() );
+		$('#words').html( textarea.val().split(/\s+/).length );
 	});
 	
 	
@@ -24,10 +25,10 @@ $(document).ready(function() {
 	/*		Themes		*/
 	// List available styles
 	for (var i = 0; i < styles.length; i++) {
-		$('#css').append('<li>'+styles[i]+'</li>');
+		$('#themes').append('<li>'+styles[i]+'</li>');
 	}
 	
-	$('#css>li').click(function(){
+	$('#themes>li').click(function(){
 		$('html').attr('class', 'theme '+$(this).html());
 		localStorage.setItem("ompad_theme", $(this).html() );
 		textarea.focus().scrollHeight;
@@ -38,6 +39,7 @@ $(document).ready(function() {
 		if (!i) {i = 1;}
 		textarea.val( localStorage.getItem("ompad_t"+i) ).focus();
 		localStorage.setItem("ompad_page", i );
+		$('#words').html( textarea.val().split(/\s+/).length );
 	}
 	
 		
