@@ -64,5 +64,5 @@ html.theme.fire {background:#962B2B;}
 html.theme.night {background:#000;}
 	.theme.night #t{color:#666;font-family: 'Helvetica Neue',sans-serif;}
 	
-html.theme.hide {}
+html.theme.hide {background:#fff;}
 	.theme.hide #t{display:none;}
