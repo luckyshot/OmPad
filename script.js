@@ -4,6 +4,8 @@ $(document).ready(function() {
 	/*		Variables		*/
 	var textarea = $('#t'),
 		msgbox = $('#m'),
+		// This is the list of active themes, 
+		// if you add a new theme make sure to list it here
 		styles = ['', 'ivory', 'sans', 'warm', 'grey', 'paper', 'big', 'bigsans', 'haiku', 'code', 'night', 'nightsans', 'tinyscreen', 'hide'];
 
 	/*		Save text		*/
