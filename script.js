@@ -5,8 +5,8 @@ $(document).ready(function() {
 	var textarea = $('#t'),
 		msgbox = $('#m'),
 		// This is the list of active themes, 
-		// if you add a new theme make sure to list it here
-		styles = ['', 'ivory', 'sans', 'warm', 'grey', 'paper', 'big', 'bigsans', 'haiku', 'code', 'night', 'nightsans', 'tinyscreen', 'hide'];
+		// if you add a new theme make sure to list it here'fire', 
+		styles = ['default', 'ivory', 'sans', 'stone', 'paper', 'big', 'bigsans', 'haiku', 'code', 'night', 'hide'];
 
 	/*		Save text		*/
 	textarea.bind('input paste', function() {
