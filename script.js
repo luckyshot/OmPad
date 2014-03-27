@@ -6,14 +6,23 @@ $(document).ready(function() {
 		msgbox = $('#m'),
 		// This is the list of active themes, 
 		// if you add a new theme make sure to list it here'fire', 
-		styles = ['default', 'ivory', 'sans', 'stone', 'paper', 'big', 'bigsans', 'haiku', 'code', 'night', 'hide'];
+		styles = ['default', 'white', 'ivory', 'sans', 'stone', 'paper', 'small', 'big', 'bigsans', 'haiku', 'code', 'night', 'hide'];
+
+	function countwords() {
+		$('#words').html( textarea.val().split(/\s+/).length );
+		var selObj = window.getSelection();
+		if (selObj.toString()) {
+			$('#words').html( selObj.toString().split(/\s+/).length + ' / ' + $('#words').html() );
+		}
+	}
 
 	/*		Save text		*/
 	textarea.bind('input paste', function() {
 		localStorage.setItem("ompad_t"+$('#files>li.selected').html(), textarea.val() );
-		$('#words').html( textarea.val().split(/\s+/).length );
-	});
-	
+		countwords();
+	}).bind('mouseup', function(){ countwords(); });
+
+
 	
 	/*		Resize textarea		*/
 	$(window).resize(function() {resize();});
