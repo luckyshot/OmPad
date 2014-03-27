@@ -15,7 +15,7 @@ html{background:#fbfbfb;font-family:'Helvetica Neue',Helvetica,sans-serif;}
 #files>li {border: 1px solid transparent;border-radius:50px;height:20px;background:#ccc;margin-right:10px;display:inline-block;font-size:0;width: 20px;vertical-align: top;opacity:.6;cursor:pointer;}
 	#files>li.selected {background:transparent;border: 1px solid #ccc;opacity:.7;cursor:default;}
 
-#t{background:transparent;border:none;color:#222;display:block;font-family:Garamond,serif;font-size:120%;min-height:500px;line-height:1.6em;margin:0 auto;padding:5%;width:90%;max-width:40em;outline: none;}
+#t{background:transparent;border:none;color:#222;display:block;font-family:Garamond,serif;font-size:120%;min-height:200px;line-height:1.6em;margin:0 auto;padding:5%;width:90%;max-width:40em;outline: none;}
 #m{background: none repeat scroll 0 0 #FEFEA3;border: 1px solid #FFE067;border-radius: 5px 5px 5px 5px;color: #333;font-size: 12px;font-weight: 700;left: 50%;margin-left: -300px;opacity: 0.95;padding: 5px;position: absolute;text-align: center;top: 5px;width: 600px;}
 
 #help {display: inline-block;color: #000;font-size: 16px;position:fixed;padding:10px;text-decoration:none;top:0;right:0;opacity: 0.5;}
@@ -29,6 +29,14 @@ html{background:#fbfbfb;font-family:'Helvetica Neue',Helvetica,sans-serif;}
 	#box-help li {font-size: 16px;line-height: 1.5em;margin-bottom: 14px;}
 	#box-help li {list-style: disc;margin: 0 0 7px 2em;}
 	#box-help .footnote {opacity: .5;margin-bottom: -20px;text-align: right;font-size: 12px;}
+
+@media screen and (max-width: 960px) {
+	#box-help {width: 70%;left: 10%;top: 5%;}
+}
+@media screen and (max-width: 640px) {
+	#box-help {width: 80%;left: 5%;top: 5%;}
+	#box-help h1 {font-size: 42px;}
+}
 
 /* Themes */
 
