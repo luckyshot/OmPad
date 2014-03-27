@@ -2,14 +2,14 @@ function supports_html5_storage() {try {return 'localStorage' in window && windo
 	
 $(document).ready(function() {
 	/*		Variables		*/
-	var textarea = $('#t'),
+	var t = $('#t'),
 		msgbox = $('#m'),
 		// This is the list of active themes, 
 		// if you add a new theme make sure to list it here'fire', 
 		styles = ['default', 'white', 'ivory', 'sans', 'stone', 'paper', 'small', 'big', 'bigsans', 'haiku', 'code', 'night', 'hide'];
 
 	function countwords() {
-		$('#words').html( textarea.val().split(/\s+/).length );
+		$('#words').html( t.html().split(/\s+/).length );
 		var selObj = window.getSelection();
 		if (selObj.toString()) {
 			$('#words').html( selObj.toString().split(/\s+/).length + ' / ' + $('#words').html() );
@@ -17,17 +17,17 @@ $(document).ready(function() {
 	}
 
 	/*		Save text		*/
-	textarea.bind('input paste', function() {
-		localStorage.setItem("ompad_t"+$('#files>li.selected').html(), textarea.val() );
+	t.bind('input paste', function() {
+		localStorage.setItem("ompad_t"+$('#files>li.selected').html(), t.html() );
 		countwords();
 	}).bind('mouseup', function(){ countwords(); });
 
 
 	
-	/*		Resize textarea		*/
+	/*		Resize t		*/
 	$(window).resize(function() {resize();});
 	function resize() {
-		textarea.height( $(window).height()-140 );
+		t.css("min-height", $(window).height()-140 );
 	}
 	resize();
 	
@@ -40,15 +40,15 @@ $(document).ready(function() {
 	$('#themes>li').click(function(){
 		$('html').attr('class', 'theme '+$(this).html());
 		localStorage.setItem("ompad_theme", $(this).html() );
-		textarea.focus().scrollHeight;
+		t.focus().scrollHeight;
 	});
 	
 	
 	function selectfile(i) {
 		if (!i) {i = 1;}
-		textarea.val( localStorage.getItem("ompad_t"+i) ).focus();
+		t.html( localStorage.getItem("ompad_t"+i) ).focus();
 		localStorage.setItem("ompad_page", i );
-		$('#words').html( textarea.val().split(/\s+/).length );
+		$('#words').html( t.html().split(/\s+/).length );
 	}
 	
 		
@@ -83,8 +83,8 @@ $(document).ready(function() {
 
 	$('#files>li:eq('+(localStorage.getItem("ompad_page")-1)+')').addClass('selected');
 	
-	if (!textarea.val()) {textarea.val('Welcome to OmPad, you can start typing here...\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget tellus suscipit, sollicitudin odio vel, mattis quam. Etiam tincidunt aliquam dictum. Phasellus lectus felis, gravida non semper vel, ultrices vulputate nunc. Mauris viverra risus sit amet commodo sodales. Pellentesque turpis lectus, venenatis non ultrices quis, vestibulum vitae arcu. Morbi purus quam, varius a enim a, posuere vehicula quam. Donec fringilla orci ut mi euismod, in consectetur risus rhoncus.\n\nDuis pellentesque rutrum fermentum. Duis aliquam in arcu ac varius. Proin aliquam, lorem a consequat porttitor, tortor nisi placerat turpis, eu auctor ligula dui ac justo. Donec commodo dui et condimentum imperdiet. Integer accumsan congue sem, a suscipit felis aliquet ac. Nullam sollicitudin gravida felis sit amet porttitor. Aenean vestibulum a ante vel porta. Proin nec bibendum augue. Etiam id felis vitae velit sagittis molestie ac sit amet quam. Duis interdum euismod ligula vel semper. Praesent ac erat pharetra, eleifend quam non, laoreet mi. Donec at rhoncus erat. Maecenas egestas libero id vehicula rhoncus. Sed vel urna at massa dignissim tincidunt in sed nulla. Phasellus sit amet neque auctor, euismod tellus eu, adipiscing arcu.');}
+	if (!t.html()) {t.html('Welcome to OmPad, you can start typing here...<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget tellus suscipit, sollicitudin odio vel, mattis quam. Etiam tincidunt aliquam dictum. Phasellus lectus felis, gravida non semper vel, ultrices vulputate nunc. Mauris viverra risus sit amet commodo sodales. Pellentesque turpis lectus, venenatis non ultrices quis, vestibulum vitae arcu. Morbi purus quam, varius a enim a, posuere vehicula quam. Donec fringilla orci ut mi euismod, in consectetur risus rhoncus.<br><br>Duis pellentesque rutrum fermentum. Duis aliquam in arcu ac varius. Proin aliquam, lorem a consequat porttitor, tortor nisi placerat turpis, eu auctor ligula dui ac justo. Donec commodo dui et condimentum imperdiet. Integer accumsan congue sem, a suscipit felis aliquet ac. Nullam sollicitudin gravida felis sit amet porttitor. Aenean vestibulum a ante vel porta. Proin nec bibendum augue. Etiam id felis vitae velit sagittis molestie ac sit amet quam. Duis interdum euismod ligula vel semper. Praesent ac erat pharetra, eleifend quam non, laoreet mi. Donec at rhoncus erat. Maecenas egestas libero id vehicula rhoncus. Sed vel urna at massa dignissim tincidunt in sed nulla. Phasellus sit amet neque auctor, euismod tellus eu, adipiscing arcu.');}
 
-	textarea.focus();
+	t.focus();
 			
 });
