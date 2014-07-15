@@ -8,3 +8,6 @@
 <p>OmPad is build in HTML5 and jQuery. It is a great example on how modern websites can be so simple and tiny yet so functional. Great for students and curious developers. You can grab the code and create your own version and styles. All the notes and settings are saved through HTML5 LocalStorage, this allows you to use OmPad also while being offline.</p>
 <h2>Questions &amp; Contact</h2>
 <p>Got any questions, ideas or suggestions? Contact <a href="http://xaviesteve.com/contact/">Xavi</a>.</p>
+
+<h3>Thanks</h3>
+<p>http://codepen.io/barney-parker/pen/idjCG</p>

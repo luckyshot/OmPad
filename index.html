@@ -23,15 +23,76 @@
 
 	<div id="menu">
 		<h1 id="logo">OmPad</h1>
-		<ul id="themes"></ul>
+		<ul id="style">
+			<li class="typography">
+				<span>Font</span>
+				<a href="#" class="serif">A</a>
+				<a href="#" class="sans">A</a>
+				<a href="#" class="cursive">A</a>
+				<a href="#" class="mono">A</a>
+			</li>
+			<li class="size">
+				<span>Size</span>
+				<a href="#" class="small">S</a>
+				<a href="#" class="medium">M</a>
+				<a href="#" class="large">L</a>
+				<a href="#" class="xlarge">X</a>
+			</li>
+			<li class="color">
+				<span>Color</span>
+				<a href="#" class="cblack">&nbsp;</a>
+				<a href="#" class="cdark">&nbsp;</a>
+				<a href="#" class="cblue">&nbsp;</a>
+				<a href="#" class="cwhite">&nbsp;</a>
+			</li>
+			<li class="background">
+				<span>Back</span>
+				<a href="#" class="bwhite">&nbsp;</a>
+				<a href="#" class="bstone">&nbsp;</a>
+				<a href="#" class="bivory">&nbsp;</a>
+				<a href="#" class="bblack">&nbsp;</a>
+			</li>
+			<li class="width">
+				<span>Width</span>
+				<a href="#" class="w1">20</a>
+				<a href="#" class="w2">40</a>
+				<a href="#" class="w3">60</a>
+				<a href="#" class="w4">100</a>
+			</li>
+		</ul>
 	</div>
+
 	<ul id="files"></ul>
 	
 	<div id="t" contenteditable="true"></div>
 
-	<div id="m">Loading&hellip;</div>
-	
-	<a href="#" id="help" title="Help">?</a></li>
+	<div id="controls">
+		<a data-role="h1" href="#">h1</a>
+		<a data-role="h2" href="#">h2</a>
+		<a data-role="h3" href="#">h3</a>
+		<a data-role="h4" href="#">h4</a>
+		<a data-role="h5" href="#">h5</a>
+		<a data-role="h6" href="#">h6</a>
+		<a data-role="p" href="#">p</a>
+		<a data-role="insertUnorderedList" href="#">ul</a>
+		<a data-role="insertOrderedList" href="#">ol</a>
+		<a data-role="bold" href="#">b</a>
+		<a data-role="italic" href="#">i</a>
+		<a data-role="removeFormat" href="#">✎</a>
+		<!-- 
+		https://developer.mozilla.org/en-US/docs/Rich-Text_Editing_in_Mozilla#Executing_Commands
+		<a data-role="undo" href="#">⟲</a>
+		<a data-role="redo" href="#">⟳</a>
+		<a data-role="justifyLeft" href="#"><i class="fa fa-align-left"></i></a>
+		<a data-role="justifyCenter" href="#"><i class="fa fa-align-center"></i></a>
+		<a data-role="justifyRight" href="#"><i class="fa fa-align-right"></i></a>
+		<a data-role="justifyFull" href="#"><i class="fa fa-align-justify"></i></a>
+		<a data-role="indent" href="#"><i class="fa fa-indent"></i></a>
+		<a data-role="outdent" href="#"><i class="fa fa-outdent"></i></a> 
+		<a data-role="subscript" href="#"><i class="fa fa-subscript"></i></a>
+		<a data-role="superscript" href="#"><i class="fa fa-superscript"></i></a>
+		-->
+	</div>
 
 	<div class="details"><span id="words"></span> words</div>
 	
@@ -44,7 +105,7 @@
 		<p style="font-size:133%">OmPad is a notepad to store notes, texts or even poems. It is focused in simplicity and speed for quick note taking while inspiration is at its peak.</p>
 		
 		<ul>
-			<li><b>12 Themes</b>: Choose the perfect theme for your situation (top left)</li>
+			<li><b>Customizable</b>: Choose font color, size and more (top left)</li>
 			<li><b>5 Pages</b>: Use them to save different content (bottom left)</li>
 			<li><b>Saves as you type</b>: If you close the browser it will still be there</li>
 		</ul>
